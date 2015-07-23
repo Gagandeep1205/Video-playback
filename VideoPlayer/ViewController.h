@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate>
 
+@property (strong, nonatomic) NSURL *videoURL;
+@property (strong, nonatomic) MPMoviePlayerController *videoController;
+- (IBAction)btnPlay:(id)sender;
+- (IBAction)btnFullScreen:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *outletBtnFullscreen;
 
 @end
 
